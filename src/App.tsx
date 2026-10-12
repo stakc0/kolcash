@@ -143,7 +143,7 @@ export default function App() {
 
   return <main className="nomo-page"><div className={cursor.active ? 'pump-cursor is-active' : 'pump-cursor'} style={{ left: cursor.x, top: cursor.y }} aria-hidden="true"><img src="/pump-cursor.svg" alt="" /></div>
     <header className="nomo-nav">
-      <a className="nomo-brand wallet-title" href="#launch" aria-label="KOL Cash home">kol cash</a>
+      <a className="nomo-brand wallet-title" href="#launch" aria-label="KOL Cash home"><img className="nomo-logo" src="/kol-logo.png" alt="KOL"/>kol cash</a>
       <div className="nomo-actions"><a href="#launch">launch</a><a href="#markets">KOLs</a><a href={PLATFORM_X} target="_blank" rel="noreferrer">X</a><button type="button" onClick={copyRecipient}>{copied ? 'copied' : 'copy KOL wallet'}</button></div>
     </header>
 
