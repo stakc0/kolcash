@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face { font-family: 'Aeonik'; src: url('/fonts/Aeonik-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Aeonik'; src: url('/fonts/Aeonik-Medium.ttf') format('truetype'); font-weight: 500 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Aeonik'; src: url('/fonts/Aeonik-Bold.ttf') format('truetype'); font-weight: 700 900; font-style: normal; font-display: swap; }
+
+:root { background: #f6f0df; color: #17110d; font-family: Aeonik, Inter, system-ui, sans-serif; }
+* { box-sizing: border-box; }
+html { background: #f6f0df; scroll-behavior: smooth; }
+body { margin: 0; background: #f6f0df; color: #17110d; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+
+.kolcash-page { min-height: 100vh; padding: clamp(18px, 3vw, 34px); background: radial-gradient(circle at 78% 12%, #ffb000 0 90px, transparent 92px), #f6f0df; }
+.kolcash-nav { max-width: 1180px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.kolcash-brand { display: inline-flex; align-items: center; gap: 10px; font-size: clamp(1.8rem, 3vw, 2.55rem); font-weight: 950; letter-spacing: -.09em; text-transform: lowercase; }
+.kolcash-brand span { display: grid; place-items: center; width: 42px; height: 42px; border: 3px solid #17110d; border-radius: 50%; background: #b6ff00; letter-spacing: 0; }
+.kolcash-nav nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px; }
+.kolcash-nav nav a, .kolcash-actions a, .launch-button, .coin-preview button { min-height: 42px; display: inline-flex; align-items: center; justify-content: center; border: 2px solid #17110d; border-radius: 999px; padding: 0 16px; background: transparent; color: #17110d; font-size: 12px; font-weight: 950; letter-spacing: .08em; text-transform: lowercase; }
+.kolcash-nav nav a:last-child, .kolcash-actions a:first-child, .launch-button { background: #17110d; color: #f6f0df; }
+
+.kolcash-hero { max-width: 1180px; margin: 0 auto; padding: clamp(70px, 10vw, 125px) 0 clamp(38px, 6vw, 70px); }
+.kolcash-prompt { margin-bottom: 18px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; color: #7a3b00; }
+.kolcash-hero h1 { max-width: 1080px; margin: 0; font-size: clamp(4.8rem, 15vw, 13rem); line-height: .76; font-weight: 950; letter-spacing: -.13em; text-transform: lowercase; }
+.kolcash-hero p { max-width: 690px; margin: 28px 0 0; font-size: clamp(1.1rem, 2vw, 1.45rem); line-height: 1.25; font-weight: 650; color: #4d3424; }
+.kolcash-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.kolcash-actions a:nth-child(2) { background: #ffb000; }
+
+.kolcash-stats { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 2px solid #17110d; border-bottom: 2px solid #17110d; }
+.kolcash-stats div { padding: 18px 16px; border-right: 2px solid #17110d; }
+.kolcash-stats div:last-child { border-right: 0; }
+.kolcash-stats span, .kolcash-stats small, .card-head p, .board-head p { display: block; font-size: 11px; font-weight: 950; letter-spacing: .14em; text-transform: uppercase; opacity: .62; }
+.kolcash-stats b { display: block; margin-top: 8px; font-size: clamp(1.7rem, 3vw, 2.6rem); line-height: .9; font-weight: 950; letter-spacing: -.08em; text-transform: lowercase; }
+.kolcash-stats small { margin-top: 8px; letter-spacing: .06em; opacity: .5; }
+
+.kolcash-grid { max-width: 1180px; margin: clamp(28px, 5vw, 58px) auto 0; display: grid; grid-template-columns: 1.1fr .9fr; gap: 18px; }
+.kolcash-card { border: 2px solid #17110d; border-radius: 30px; background: #fff8e8; padding: clamp(20px, 3vw, 34px); box-shadow: 10px 10px 0 #17110d; }
+.card-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 22px; }
+.card-head h2, .board-head h2 { margin: 0; font-size: clamp(2.2rem, 5vw, 5rem); line-height: .82; font-weight: 950; letter-spacing: -.11em; text-transform: lowercase; }
+.launch-card label { display: grid; gap: 8px; margin-top: 14px; font-size: 12px; font-weight: 950; letter-spacing: .1em; text-transform: uppercase; }
+.launch-card label span { float: right; }
+.launch-card input:not([type='range']) { width: 100%; min-height: 52px; border: 2px solid #17110d; border-radius: 18px; background: #f6f0df; padding: 0 16px; color: #17110d; outline: none; font-size: 16px; font-weight: 750; letter-spacing: -.03em; }
+.launch-card input[type='range'] { accent-color: #ff7a00; }
+.launch-button { width: 100%; margin-top: 22px; min-height: 56px; font-size: 13px; }
+
+.coin-preview { display: grid; place-items: center; min-height: 330px; text-align: center; border: 2px dashed #17110d; border-radius: 24px; background: #ffb000; padding: 26px; }
+.coin-preview span { display: grid; place-items: center; width: 92px; height: 92px; border: 3px solid #17110d; border-radius: 50%; background: #b6ff00; font-size: 23px; font-weight: 950; letter-spacing: -.08em; }
+.coin-preview h3 { margin: 18px 0 0; font-size: clamp(2.5rem, 6vw, 5.6rem); line-height: .82; font-weight: 950; letter-spacing: -.12em; text-transform: lowercase; }
+.coin-preview p { margin: 16px 0 8px; font-size: 13px; font-weight: 850; }
+.coin-preview button { background: #fff8e8; }
+.route-lines { display: grid; grid-template-columns: 1fr 38px 1fr 38px 1fr; gap: 8px; align-items: center; margin-top: 18px; font-size: 11px; font-weight: 950; letter-spacing: .1em; text-transform: uppercase; }
+.route-lines div { min-height: 44px; display: grid; place-items: center; border: 2px solid #17110d; border-radius: 999px; text-align: center; }
+.route-lines i { height: 2px; background: #17110d; }
+
+.kolcash-board, .kolcash-how { max-width: 1180px; margin: clamp(32px, 6vw, 70px) auto 0; }
+.board-head { margin-bottom: 18px; }
+.kol-list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.kol-list button { min-height: 148px; border: 2px solid #17110d; border-radius: 24px; background: #fff8e8; color: #17110d; padding: 18px; text-align: left; transition: transform .16s ease, background .16s ease; }
+.kol-list button.active, .kol-list button:hover { background: #b6ff00; transform: translateY(-3px); }
+.kol-list span { display: block; font-size: 1.55rem; font-weight: 950; letter-spacing: -.08em; text-transform: lowercase; }
+.kol-list small, .kol-list b { display: block; margin-top: 8px; font-size: 12px; color: #4d3424; }
+
+.kolcash-how { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; padding-bottom: 60px; }
+.kolcash-how article { border-top: 2px solid #17110d; padding-top: 18px; }
+.kolcash-how b { display: inline-grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: #17110d; color: #f6f0df; }
+.kolcash-how h3 { margin: 14px 0 8px; font-size: 2rem; line-height: .9; font-weight: 950; letter-spacing: -.08em; text-transform: lowercase; }
+.kolcash-how p { margin: 0; color: #4d3424; font-weight: 650; }
+
+@media (max-width: 840px) {
+  .kolcash-nav { align-items: flex-start; flex-direction: column; }
+  .kolcash-nav nav { justify-content: flex-start; }
+  .kolcash-stats, .kolcash-grid, .kol-list, .kolcash-how { grid-template-columns: 1fr; }
+  .kolcash-stats div { border-right: 0; border-bottom: 2px solid #17110d; }
+  .kolcash-stats div:last-child { border-bottom: 0; }
+  .route-lines { grid-template-columns: 1fr; }
+  .route-lines i { height: 20px; width: 2px; justify-self: center; }
+}
