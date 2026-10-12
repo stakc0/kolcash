@@ -36,7 +36,7 @@ async function ensureWeb3() {
 function TrailerPreview({ marketCap, volume24h, selectedName }: { marketCap: number; volume24h: number; selectedName: string }) {
   return <section className="trailer-preview" aria-label="KOL Cash trailer preview">
     <div className="trailer-copy"><p>trailer preview</p><h1>attention should pay its source.</h1><span>KOL Cash turns KOL wallets into launch destinations. Pick the voice, route the fees, let the market prove who can move attention.</span><div><a href="#launch">launch with a KOL</a><a href="#add-kol">add a KOL</a></div></div>
-    <div className="trailer-screen"><div className="trailer-top"><b>KOL_CASH.EXE</b><i>LIVE</i></div><div className="trailer-stage video-stage"><video src="/kol-trailer.mov" autoPlay muted loop playsInline preload="metadata" poster="/kol-logo.png"/><div className="scanline one"/><div className="scanline two"/><div className="trailer-burst">fees → {selectedName}</div></div><div className="trailer-feed"><span>MC {usd(marketCap)}</span><span>VOL {usd(volume24h)}</span><span>CA {shortCa(KOLCASH_CA)}</span></div></div>
+    <div className="trailer-screen"><div className="trailer-top"><b>KOL_CASH.EXE</b><i>LIVE</i></div><div className="trailer-stage video-stage"><video autoPlay muted loop playsInline preload="auto" poster="/kol-trailer-poster.jpg"><source src="/kol-trailer.webm" type="video/webm"/><source src="/kol-trailer.mp4" type="video/mp4"/></video><div className="scanline one"/><div className="scanline two"/><div className="trailer-burst">fees → {selectedName}</div></div><div className="trailer-feed"><span>MC {usd(marketCap)}</span><span>VOL {usd(volume24h)}</span><span>CA {shortCa(KOLCASH_CA)}</span></div></div>
   </section>;
 }
 
