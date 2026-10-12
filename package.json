@@ -11,9 +11,12 @@
     "typecheck": "tsc --noEmit -p tsconfig.app.json"
   },
   "dependencies": {
+    "@solana/spl-token": "^0.4.15",
     "@solana/web3.js": "^1.98.4",
     "@supabase/supabase-js": "^2.57.4",
+    "bn.js": "^5.2.5",
     "bs58": "^6.0.0",
+    "busboy": "^1.6.0",
     "lucide-react": "^0.344.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
