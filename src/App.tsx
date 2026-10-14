@@ -3,7 +3,7 @@ import { kolcashDb } from './lib/kolcash-db';
 import { KOLSCAN_SEED } from './kolscan-seed';
 
 const PLATFORM_X = 'https://x.com/kol_cash';
-const KOLCASH_CA = '7hQqHG8DPSbNR83bbkbB5XCD25b4NBuhdRQKj5d2pump';
+const KOLCASH_CA = 'FBWQybBcLKXLQ31DL9cvG7Zq5XXRe4nYHhTtMwspump';
 const GOLD_BADGE = 'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Twitter_Verified_Badge_Gold.svg/960px-Twitter_Verified_Badge_Gold.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20230122072942';
 
 type Kol = { rank: number; wallet: string; display_name?: string; name?: string; username?: string | null; avatar_url?: string | null; token_ca?: string | null; buys?: number; sells?: number; pnl_sol?: number; pnl_usd?: number; source?: string };
